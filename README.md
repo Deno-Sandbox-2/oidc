@@ -16,8 +16,8 @@ Init the module with required var: (endpoint, client_id, client_secret, redirect
 | redirectUrl | string |  the callback uri, for example `https://myFamulousProject.amelia.lu/login/callback` |
 
 ```ts
-import { OICD } from "https://deno.land/x/oicd/mod.ts";
-const myoidc = new OICD("https://auth.alice-snow.me", MY_CLIENT_PUB, MY_CLIENT_PRIV, "https://myFamulousProject.amelia.lu/login/callback")
+import { OIDC } from "https://deno.land/x/oidc/mod.ts";
+const myoidc = new OIDC("https://auth.alice-snow.me", MY_CLIENT_PUB, MY_CLIENT_PRIV, "https://myFamulousProject.amelia.lu/login/callback")
 ```
 
 ## Step 2: (facultative) get your redirection url
