@@ -22,7 +22,7 @@ export class OIDC {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
-                "Auhorization": `Basic ${btoa(`${this.client_id}:${this.client_secret}`)}`
+                "Authorization": `Basic ${btoa(`${this.client_id}:${this.client_secret}`)}`
             },
             body: `grant_type=authorization_code&code=${code}&redirect_uri=${this.redirectUrl}`
         })
@@ -53,7 +53,7 @@ export class OIDC {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
-                "Auhorization": `Basic ${btoa(`${this.client_id}:${this.client_secret}`)}`
+                "Authorization": `Basic ${btoa(`${this.client_id}:${this.client_secret}`)}`
             },
             body: `access_token=${access_token}`
         })
@@ -65,6 +65,7 @@ export class OIDC {
                 data: response
             };
         } catch (error) {
+            console.log(error);
             return {
                 success: false,
                 error: "Invalid response, cannot get user data"
