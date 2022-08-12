@@ -1,4 +1,4 @@
-export class OICD {
+export class OIDC {
     private endpoint: string;
     private client_id: string;
     private client_secret: string;
