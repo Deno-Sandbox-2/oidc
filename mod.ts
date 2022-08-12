@@ -14,7 +14,7 @@ export class OIDC {
 
     // generate the authorization url
     public generateAuthUrl(scopes:string[], state:string) {
-        return `${this.endpoint}/authorize/?client_id=${this.client_id}&redirect_uri=${this.redirectUrl}&response_type=code&scope=${scopes.join(" ")}&state=${state}`;
+        return `${this.endpoint}/application/o/authorize/?client_id=${this.client_id}&redirect_uri=${this.redirectUrl}&response_type=code&scope=${scopes.join(" ")}&state=${state}`;
     }
 
     public async authUser(code:string) {
